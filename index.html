@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Lalit Mangal">
+        <meta name="description" content="Portfolio website of Lalit Mangal">
+        <link rel="shortcut icon" type="image/x-icon" href="Assets/Images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+        <link rel="stylesheet" href="Assets/css/styles.css">
+        <link rel="stylesheet" href="Assets/css/animate.css">
+        <link rel="stylesheet" href="Assets/css/github-calendar-responsive.css">
+        <link rel="stylesheet" href="Assets/css/tailwind.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="Assets/js/github-calendar.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <title>Portfolio | Lalit Mangal</title>
+        <script>
+          if (localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        </script>
+    </head>
+    <body>
+
+      <!-- Navbar -->
+
+      <nav class="bg-gray-800 dark:bg-royal-blue fixed top-0 w-full z-10">
+        <div class="container mx-auto px-4 flex items-center justify-between h-16">
+          <div class="animate__animated animate__fadeInDown flex items-center">
+            <a href="https://shinigami1908.github.io/Portfolio"><img src="Assets/images/name_icon.svg" alt="name icon" class="h-12 hover:opacity-70" ></a>
+          </div>
+          <div class="hidden lg:block">
+            <ul class="list-none" id = "navbar">
+              <li id = "Item-AboutMe" class="animate__animated animate__fadeInDown cursor-pointer inline-block text-base font-medium text-white dark:text-beige-text mr-4 hover:text-gray-300 dark:hover:text-beige-text-hover">About</li>
+              <li id = "Item-Skills" class="animate__animated animate__fadeInDown cursor-pointer inline-block text-base font-medium text-white dark:text-beige-text mr-4 hover:text-gray-300 dark:hover:text-beige-text-hover">Skills</li>
+              <li id = "Item-Projects" class="animate__animated animate__fadeInDown cursor-pointer inline-block text-base font-medium text-white dark:text-beige-text mr-4 hover:text-gray-300 dark:hover:text-beige-text-hover">Projects</li>
+              <li id = "Item-Stats" class="animate__animated animate__fadeInDown cursor-pointer inline-block text-base font-medium text-white dark:text-beige-text mr-4 hover:text-gray-300 dark:hover:text-beige-text-hover">Stats</li>
+              <li id = "Item-Education" class="animate__animated animate__fadeInDown cursor-pointer inline-block text-base font-medium text-white dark:text-beige-text mr-4 hover:text-gray-300 dark:hover:text-beige-text-hover">Education</li>
+              <li id = "Item-Contact" class="animate__animated animate__fadeInDown cursor-pointer inline-block text-base font-medium text-white dark:text-beige-text mr-7 hover:text-gray-300 dark:hover:text-beige-text-hover">Contact</li>
+              <input type="checkbox" class="checkbox" id="checkbox">
+              <label for="checkbox" class="animate__animated animate__fadeInDown checkbox-label inline-block leading-[1px]">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="ball"></span>
+              </label>
+            </ul>
+          </div>
+            <div class="block lg:hidden">
+              <button id="nav-toggle" class="text-gray-300 focus:outline-none" onclick="this.classList.toggle('opened');">
+                <svg width="45" height="45" viewBox="0 0 100 100">
+                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+              </button>
+          </div>
+          <div id="dropdown" class="fixed z-50 top-0 right-0 h-screen w-1/4 max-md:w-1/3 hidden fade-in lg:hidden bg-gray-800 dark:bg-royal-blue mt-16">
+              <div class="font-medium text-white text-lg p-4">
+              <ul class="list-none space-y-8" id = "navbarsmall">
+                <li id = "Item-AboutMe" class="animate__animated animate__fadeInRight cursor-pointer font-medium text-white dark:text-beige-text hover:text-gray-300 dark:hover:text-beige-text-hover border-b">About</li>
+                <li id = "Item-Skills" class="animate__animated animate__fadeInRight cursor-pointer font-medium text-white dark:text-beige-text hover:text-gray-300 dark:hover:text-beige-text-hover border-b">Skills</li>
+                <li id = "Item-Projects" class="animate__animated animate__fadeInRight cursor-pointer font-medium text-white dark:text-beige-text hover:text-gray-300 dark:hover:text-beige-text-hover border-b">Projects</li>
+                <li id = "Item-Stats" class="animate__animated animate__fadeInRight cursor-pointer font-medium text-white dark:text-beige-text hover:text-gray-300 dark:hover:text-beige-text-hover border-b">Stats</li>
+                <li id = "Item-Education" class="animate__animated animate__fadeInRight cursor-pointer font-medium text dark:text-beige-text-white hover:text-gray-300 dark:hover:text-beige-text-hover border-b">Education</li>
+                <li id = "Item-Contact" class="animate__animated animate__fadeInRight cursor-pointer font-medium text-white dark:text-beige-text hover:text-gray-300 dark:hover:text-beige-text-hover border-b">Contact</li>
+                <input type="checkbox" class="checkbox" id="checkboxsm">
+                <label for="checkboxsm" class="animate__animated animate__fadeInRight checkbox-label flex justify-center">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <span class="ball"></span>
+                </label>
+            </ul>
+              </div>
+           </div>
+         </div>
+      </nav>
+
+      <!-- Back to Top -->
+
+      <button class="fixed bottom-5 hidden right-6 py-4 px-4 rounded-full bg-blue-900 dark:bg-indigo-top text-white hover:bg-blue-800 dark:hover:bg-indigo-top-hover opacity-100 z-10 max-lg:py-3 max-lg:px-3" id="back-to-top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+      </button>      
+
+      <!-- Home Section -->
+
+      <div class = "min-h-screen grid grid-cols-1 lg:grid-cols-2 place-items-center home">
+        <div style="font-family: monospace;" class="text-center lg:text-left text-xl md:text-2xl xl:text-2xl max-lg:mt-20 lg:col-span-1 lg:row-span-1 dark:text-white">
+          <p class="text-3xl md:text-4xl xl:text-5xl">Hello World,<br>My Name is <span class="font-bold underline">Lalit Mangal</span></p><br>
+          <span class = "text-xl md:text-2xl xl:text-2xl" id="typed-text"></span>
+          <br><br><br>
+        </div>
+        <span>
+          <img class="h-80 lg:h-96 xl:h-max lg:col-span-1 lg:row-span-1 homeimg" alt="home image">
+        </span>
+      </div>
+
+      <!-- About Me Section -->
+
+      <div class = "min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-slate-100 dark:bg-beige max-lg:px-5" id = "Section-AboutMe">
+        <div style="font-family: 'Unbounded', cursive;" class="flex justify-center lg:col-start-2 lg:col-span-1 lg:row-span-1 align-text-top max-lg:mt-10 mt-40">
+          <h1 class="wow animate__animated animate__fadeInDown text-3xl lg:text-4xl font-semibold max-lg:mb-9 dark:text-white">About Me</h1>
+        </div>
+        <span class="place-self-center lg:col-span-1 lg:row-start-1 lg:row-span-3">
+          <img src="Assets/Images/profile.jpg" class="gradient-border h-64 lg:h-80 xl:h-96 max-lg:-mt-16" alt="profile image" id = "aboutmeimg">
+        </span>
+        <div style="font-family: 'Montserrat Alternates', sans-serif;" class="lg:col-span-1 lg:row-span-2">
+          <p class = "wow animate__animated animate__fadeIn animate__slower text-xl lg:text-2xl text-justify lg:mr-10 dark:text-beige-text">I am a 19 year old 3rd year student pursuing B.Tech in CSE at BIT Mesra from Gwalior, M.P. I am interested in Programming since class 8th.
+            I practice CP problems on CodeForces and CodeChef, did DSA on LeetCode and HackerRank. My hobbies are playing guitar, solving Rubik's cube and 
+            playing Badminton.
+          </p><br>
+          <div class="max-lg:text-center mt-6 max-lg:-mb-6">
+            <a target="_blank" href="https://drive.google.com/file/d/16v_rKdbFtObeRFFfRsXxfDw8UarYNM39/view?usp=sharing"><button class="wow animate__animated animate__fadeInDown rounded-full border-2 border-slate-500 hover:border-black px-4 py-2 dark:text-white dark:border-zinc-500 dark:hover:border-zinc-200">Resume</button></a> 
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+
+      <div class="min-h-screen pb-5 max-xl:pb-7 dark:bg-beige-2" id = "Section-Skills">
+        <div style="font-family: 'Unbounded', cursive;" class="flex justify-center">
+          <h1 class="wow animate__animated animate__fadeInDown text-3xl lg:text-4xl font-semibold max-lg:mt-10 mt-24 dark:text-white">Skills</h1>
+        </div>
+        <div class="wow animate__animated animate__fadeIn flex justify-center">
+          <div style="font-family: 'Montserrat Alternates', sans-serif;" class="lg:px-16 px-10 py-8 rounded-lg mt-8 bg-zinc-200 dark:bg-beige-1 grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-6">
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-2xl hover:opacity-100 transition duration-200"><span class="flex shrink justify-center"><img src="Assets/Images/skills_images/c++.svg" alt="C++" class="h-24"></span><p class="text-center text-xl mt-2">C++</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 col-start-2"><span class="flex justify-center"><img src="Assets/Images/skills_images/java.svg" alt="Java" class="h-24"></span><p class="text-center text-xl mt-2">Java</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 lg:col-start-3"><span class="flex justify-center"><img src="Assets/Images/skills_images/python.svg" alt="Python" class="h-24"></span><p class="text-center text-xl mt-2">Python</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 max-lg:col-start-2 2xl:col-start-4"><span class="flex justify-center"><img src="Assets/Images/skills_images/bash.svg" alt="Bash" class="h-24"></span><p class="text-center text-xl mt-2">Bash</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 lg:max-2xl:col-start-2"><span class="flex justify-center"><img src="Assets/Images/skills_images/html.svg" alt="HTML" class="h-24"></span><p class="text-center text-xl mt-2">HTML</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 col-start-2 lg:max-2xl:col-start-3 2xl:col-start-2"><span class="flex justify-center"><img src="Assets/Images/skills_images/css.svg" alt="CSS3" class="h-24"></span><p class="text-center text-xl mt-2">CSS3</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 2xl:col-start-3"><span class="flex justify-center"><img src="Assets/Images/skills_images/tailwindcss.svg" alt="Tailwind CSS" class="h-24"></span><p class="text-center text-xl mt-2">Tailwind CSS</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 col-start-2 lg:max-2xl:col-start-2 2xl:col-start-4"><span class="flex justify-center"><img src="Assets/Images/skills_images/api.svg" alt="API" class="h-20 mt-3"></span><p class="text-center text-xl mt-3">API</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 lg:max-2xl:col-start-3 2xl:col-start-2"><span class="flex justify-center"><img src="Assets/Images/skills_images/mysql.svg" alt="MySQL" class="h-24"></span><p class="text-center text-xl mt-2">MySQL</p></div>
+              <div class="wow animate__animated animate__fadeIn animate__delay-1s bg-zinc-500 dark:bg-shuttle-gray opacity-75 text-white rounded-lg h-40 w-36 md:w-60 py-4 hover:drop-shadow-xl hover:opacity-100 transition duration-200 col-start-2 lg:max-2xl:col-start-2 2xl:col-start-3"><span class="flex justify-center"><img src="Assets/Images/skills_images/latex.svg" alt="LaTeX" class="h-24"></span><p class="text-center text-xl mt-2">LaTeX</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+
+      <div class="min-h-screen bg-slate-200 dark:bg-beige-0" id = "Section-Projects">
+        <div style="font-family: 'Unbounded', cursive;" class="flex justify-center">
+          <h1 class="wow animate__animated animate__fadeInDown text-3xl lg:text-4xl font-semibold max-lg:mt-10 mt-24 dark:text-white">Projects</h1>
+        </div>
+        <div class="grid justify-center lg:grid-cols-2 2xl:grid-cols-3 place-items-center px-10 py-16 2xl:py-24 gap-y-10">
+          <div class="w-fit relative" id = "hovervisible"><div class = "hover:blur-md transition duration-150" id = "hoverreh"><img src="Assets/images/project_images/portfolio.jpg" style="border-bottom: 2.5rem solid #1f2937;" alt="Portfolio" class="h-72 aspect-[964/625] max-lg:object-cover"><p style="font-family: 'Montserrat Alternates', sans-serif;" class="wow animate__animated animate__fadeInUp text-white absolute bottom-2">Portfolio Website</p></div>
+          <div class="hidden pointer-events-none" id = "visibleonhover">
+            <p style="font-family: 'Montserrat Alternates', sans-serif;" class="animate__animated animate__fadeInUp text-slate-800 text-2xl absolute inset-x-0 top-5 flex justify-center">Portfolio Website</p>
+            <ul class="text-slate-800 absolute top-16 left-5 list-disc">
+              <li>A portfolio website made using <b>HTML</b>, <b>CSS</b>, <b>JS</b>, <b>Tailwind CSS</b> and <b>libraries</b></li>
+              <li>Has <b>API</b> for <b>CodeForces</b>, <b>CodeChef</b>, <b>HackerRank</b> and <b>Github</b></li>
+              <li>The site also has hidden <b>easter eggs</b> and <b>dark mode</b>.</li>
+            </ul>
+            <div class = "absolute bottom-11 inset-x-0 flex justify-around"><a target="_blank" href="https://shinigami1908.github.io/Portfolio/"><button style="font-family: 'Montserrat Alternates', sans-serif;" class="border-2 border-blue-900 font-bold py-2 px-4 rounded hover:bg-blue-800 hover:text-white pointer-events-auto" id = "hoverrakhva">Website</button></a>
+              <a target="_blank" href="https://github.com/shinigami1908/portfolio"><button style="font-family: 'Montserrat Alternates', sans-serif;" class="border-2 border-blue-900 font-bold py-2 px-4 rounded hover:bg-blue-800 hover:text-white pointer-events-auto" id = "hoverrakhva2">Github Repo</button></a></div>
+          </div></div>
+
+          <div class="w-fit relative lg:col-start-2" id = "hovervisible2"><div class = "hover:blur-md transition duration-150" id = "hoverreh2"><img src="Assets/images/project_images/tic-tac-toe.png" style="border-bottom: 2.5rem solid #1f2937;" alt="Tic-Tac-Toe" class="h-72 aspect-[964/625] max-lg:object-cover"><p style="font-family: 'Montserrat Alternates', sans-serif;" class="wow animate__animated animate__fadeInUp text-white absolute bottom-2">Tic-Tac-Toe</p></div>
+          <div class="hidden pointer-events-none" id = "visibleonhover2">
+            <p style="font-family: 'Montserrat Alternates', sans-serif;" class="animate__animated animate__fadeInUp text-slate-800 text-2xl absolute inset-x-0 top-5 flex justify-center">Tic-Tac-Toe</p>
+            <ul class="text-slate-800 absolute top-16 left-5 list-disc">
+              <li><b>Java</b> based GUI</li>
+              <li>Simulates game between 2 real world players</li>
+              <li>Made using : <b>Netbeans IDE</b></li>
+            </ul>
+            <div class = "absolute bottom-11 inset-x-0 flex justify-center"><a target="_blank" href="https://github.com/shinigami1908/tic-tac-toe"><button style="font-family: 'Montserrat Alternates', sans-serif;" class="border-2 border-blue-900 font-bold py-2 px-4 rounded hover:bg-blue-800 hover:text-white pointer-events-auto" id = "hoverrakhva3">Github Repo</button></a></div>
+          </div></div>
+
+          <div class="w-fit relative lg:max-2xl:col-span-2" id = "hovervisible3"><div class = "hover:blur-md transition duration-150" id = "hoverreh3"><img src="Assets/images/project_images/tic-tac-toe-bot.png" style="border-bottom: 2.5rem solid #1f2937;" alt="Tic-Tac-Toe Bot" class="h-72 aspect-[964/625] object-cover"><p style="font-family: 'Montserrat Alternates', sans-serif;" class="wow animate__animated animate__fadeInUp text-white absolute bottom-2">Tic-Tac-Toe Bot</p></div>
+          <div class="hidden pointer-events-none" id = "visibleonhover3">
+            <p style="font-family: 'Montserrat Alternates', sans-serif;" class="animate__animated animate__fadeInUp text-slate-100 text-2xl absolute inset-x-0 top-5 flex justify-center">Tic-Tac-Toe Bot</p>
+            <ul class="text-slate-100 absolute top-16 left-5 list-disc">
+              <li>A bot which predicts the next move/unbeatable bot for tic-tac-toe</li>
+              <li>Has <b>Command line interface</b></li>
+              <li>Made in : <b>Python</b></li>
+            </ul>
+            <div class = "absolute bottom-11 inset-x-0 flex justify-center"><a target="_blank" href="https://github.com/shinigami1908/tic-tac-toe-bot"><button style="font-family: 'Montserrat Alternates', sans-serif;" class="border-2 border-blue-900 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 hover:text-white pointer-events-auto" id = "hoverrakhva4">Github Repo</button></a></div>
+          </div></div>
+        </div>
+      </div>
+
+    <!-- Stats Section -->
+
+    <div class="min-h-screen dark:bg-beige-2" id = "Section-Stats">
+      <div style="font-family: 'Unbounded', cursive;" class="flex justify-center">
+        <h1 class="wow animate__animated animate__fadeInDown text-3xl lg:text-4xl font-semibold max-lg:mt-10 mt-24 dark:text-white">Stats</h1>
+      </div>
+      <div class="tab_container py-12 px-7">
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1" id = "statlabel" class="wow animate__animated animate__fadeInUp"><img src="Assets/images/stats_images/codeforces.svg" alt="Codeforces" class="h-14 inline-block px-5 mb-3" id = "cf"><span>CodeForces</span></label>
+  
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2" id = "statlabel" class="wow animate__animated animate__fadeInUp"><img src="Assets/images/stats_images/codechef.svg" alt="Codechef" class="h-14 inline-block px-5 mb-3" id="cc"><span>CodeChef</span></label>
+  
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3" id = "statlabel" class="wow animate__animated animate__fadeInUp"><img src="Assets/images/stats_images/hackerrank.svg" alt="Hackerrank" class="h-14 inline-block px-5 mb-3" id="hr"><span>HackerRank</span></label>
+  
+        <input id="tab4" type="radio" name="tabs">
+        <label for="tab4" id = "statlabel" class="wow animate__animated animate__fadeInUp"><img src="Assets/images/stats_images/github.svg" alt="Github" class="h-14 inline-block px-5 mb-3" id="gh"><span>Github</span></label>
+  
+        <section id="content1" class="tab-content shadow-2xl">
+          <div class="item py-10" id="codeforces">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <div class="lg:row-span-3 place-self-center">
+                <div id = "profileimage" class="py-6 lg:-ml-12 statsimg"></div>
+                <div style="font-family: 'Montserrat Alternates', sans-serif;" class = "flex justify-center mt-8 lg:-ml-12"><a target="_blank" id = "link"><button class="border-2 border-blue-900 font-bold py-2 px-4 rounded dark:text-beige-text hover:bg-blue-800 hover:text-white">Profile</button></a></div>
+              </div>
+              <div class = "lg:col-start-2 lg:row-span-3 py-6 place-self-center">
+                <p class="text-center lg:text-right text-3xl lg:mr-40 font-semibold" id = "rank"></p>
+                <p class="text-center lg:text-right text-5xl lg:mr-40 font-semibold" id = "username"></p>
+                <br>
+                <p style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" class="text-slate-500 text-center lg:text-right text-md lg:mr-40" id = "ncc"></p>
+                <p style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" class="text-slate-500 text-center lg:text-right text-md lg:mr-40" id = "institution"></p>
+                <br>
+                <p class="text-center lg:text-right text-2xl lg:mr-40" id = "rating"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section id="content2" class="tab-content shadow-2xl">
+          <div class="item py-10" id="codechef">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <div class="lg:row-span-3 place-self-center">
+                <div id = "profileimagecc" class="py-6 lg:-ml-12 statsimg"></div>
+                <div style="font-family: 'Montserrat Alternates', sans-serif;" class = "flex justify-center mt-8 lg:-ml-12"><a target="_blank" id = "linkcc"><button class="border-2 border-blue-900 font-bold py-2 px-4 rounded dark:text-beige-text hover:bg-blue-800 hover:text-white">Profile</button></a></div>
+              </div>
+              <div class = "lg:col-start-2 py-6">
+                <p style = "font-family: Arial, Helvetica, sans-serif;" class="text-center lg:text-right text-4xl lg:mr-40 dark:text-beige-text" id = "namecc"></p>
+                <ul>
+                <li style="list-style-type: none;" class="flex lg:justify-end max-lg:justify-center">
+                  <span class="mt-2 mb-2 mr-2" id ="starscc"></span>
+                  <p class="text-center lg:text-right text-2xl lg:mr-40 font-light" id = "usernamecc"></p>
+                </li>
+                </ul>
+                <br>
+                <p class="text-center lg:text-right text-md lg:mr-40" id = "countrycc"></p>
+                <p class="text-center lg:text-right text-md lg:mr-40" id = "occucc"></p>
+                <p class="text-center lg:text-right text-md lg:mr-40" id = "collegecc"></p>
+                <br>
+                <p class="text-center lg:text-right text-4xl lg:mr-40" id = "ratingcc"></p>
+                <br>
+                <div class="text-center lg:text-right lg:mr-40" id = "ratingstarsn"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section id="content3" class="tab-content shadow-2xl">
+          <div class="item py-10" id="hackerrank">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <div class="lg:row-span-3 place-self-center">
+                <div id = "profileimagehr" class="py-6 lg:-ml-12 statsimg"></div>
+                <div style="font-family: 'Montserrat Alternates', sans-serif;" class = "flex justify-center mt-8 lg:-ml-12"><a target="_blank" id = "linkhr"><button class="border-2 border-blue-900 font-bold py-2 px-4 rounded dark:text-beige-text hover:bg-blue-800 hover:text-white">Profile</button></a></div>
+              </div>
+              <div class = "lg:col-start-2 py-6">
+                <p class="text-center lg:text-right text-4xl lg:mr-40 font-bold dark:text-beige-text" id = "namehr"></p>
+                <p style = "font-family: monospace;" class="text-center text-slate-400 lg:text-right text-2xl lg:mr-40 font-normal dark:text-new-tan" id = "usernamehr"></p>
+                <br>
+                <p style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" class="text-slate-500 text-center lg:text-right text-md lg:mr-40 dark:text-new-brown" id = "countryhr"></p>
+                <p style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" class="text-slate-500 text-center lg:text-right text-md lg:mr-40 dark:text-new-brown" id = "collegehr"></p>
+                <br>
+                <div class="grid-cols-2 max-lg:text-sm flex justify-around">
+                  <div id = "badgeshr" class="dark:text-beige-text"></div>
+                  <div id = "skillshr" class="col-start-2 dark:text-beige-text"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section id="content4" class="tab-content shadow-2xl">
+          <div class="item py-10" id="github">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <div class="lg:row-span-3 place-self-center">
+                <div id = "profileimagegit" class="py-6 lg:-ml-12 statsimg"></div>
+                <div style="font-family: 'Montserrat Alternates', sans-serif;" class = "flex justify-center mt-8 lg:-ml-12"><a target="_blank" id = "linkgit"><button class="border-2 border-blue-900 font-bold py-2 px-4 rounded dark:text-beige-text hover:bg-blue-800 hover:text-white">Profile</button></a></div>
+              </div>
+              <div class = "lg:col-start-2 py-6">
+                <p class="text-center lg:text-right text-4xl lg:mr-40 font-semibold dark:text-beige-text" id = "namegit"></p>
+                <p class="text-center lg:text-right text-2xl lg:mr-40 font-extralight" id = "usernamegit"></p>
+                <br>
+                <ul>
+                  <li style = "list-style-type: none;" class="flex lg:justify-end max-lg:justify-center">
+                    <svg class="mt-1 mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11.536 3.464a5 5 0 010 7.072L8 14.07l-3.536-3.535a5 5 0 117.072-7.072v.001zm1.06 8.132a6.5 6.5 0 10-9.192 0l3.535 3.536a1.5 1.5 0 002.122 0l3.535-3.536zM8 9a2 2 0 100-4 2 2 0 000 4z" id="locgitic"></path></svg>
+                    <p class="text-center lg:text-right text-md lg:mr-40 font-normal" id = "locationgit"></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="calendar lg:row-span-2"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+
+    <div class="min-h-screen bg-slate-100 dark:bg-beige pb-10" id = "Section-Education">
+      <div style="font-family: 'Unbounded', cursive;" class="flex justify-center">
+        <h1 class="wow animate__animated animate__fadeInDown text-3xl lg:text-4xl font-semibold max-lg:mt-10 mt-24 dark:text-white">Education</h1>
+      </div>
+      <div class="wow animate__animated animate__fadeInUp mx-auto w-2/3 bg-white dark:bg-beige-2 rounded-xl shadow-md overflow-hidden mt-12 hover:shadow-lg transition duration-200">
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover md:h-44 md:w-48 xl:w-72" src="Assets/images/education_images/bit.jpg" alt="BIT Mesra, Ranchi">
+          </div>
+          <div class="p-8">
+            <div class="uppercase tracking-wide text-md sm:text-xl text-indigo-500 dark:text-blue-text font-semibold">Birla Institute of Technology, Mesra</div>
+            <p class="mt-2 text-sm sm:text-lg text-slate-500 dark:text-beige-text-1">B.Tech | Computer Science</p>
+            <p class="mt-2 text-sm sm:text-lg text-slate-500 dark:text-beige-text-1">2020 - 2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="wow animate__animated animate__fadeInUp animate__delay-1s mx-auto w-2/3 bg-white dark:bg-beige-2 rounded-xl shadow-md overflow-hidden mt-5 hover:shadow-lg transition duration-200">
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover md:h-44 md:w-48 xl:w-72" src="Assets/images/education_images/stxaviers.jpg" alt="BIT Mesra, Ranchi">
+          </div>
+          <div class="p-8">
+            <div class="uppercase tracking-wide text-md sm:text-xl text-indigo-500 dark:text-blue-text font-semibold">St. Xavier's School, Jaipur</div>
+            <p class="mt-2 text-sm sm:text-lg text-slate-500 dark:text-beige-text-1">12<sup>th</sup> | CBSE</p>
+            <p class="mt-2 text-sm sm:text-lg text-slate-500 dark:text-beige-text-1">2019 - 2020</p>
+          </div>
+        </div>
+      </div>
+      <div class="wow animate__animated animate__fadeInUp animate__delay-2s mx-auto w-2/3 bg-white dark:bg-beige-2 rounded-xl shadow-md overflow-hidden mt-5 hover:shadow-lg transition duration-200">
+        <div class="md:flex">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover md:h-44 md:w-48 xl:w-72" src="Assets/images/education_images/sica.jpg" alt="BIT Mesra, Ranchi">
+          </div>
+          <div class="p-8">
+            <div class="uppercase tracking-wide text-md sm:text-xl text-indigo-500 dark:text-blue-text font-semibold">SICA School Sc. 54, Indore</div>
+            <p class="mt-2 text-sm sm:text-lg text-slate-500 dark:text-beige-text-1">10<sup>th</sup> | CBSE</p>
+            <p class="mt-2 text-sm sm:text-lg text-slate-500 dark:text-beige-text-1">2017 - 2018</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+
+  <div class="min-h-screen dark:bg-beige-2" id = "Section-Contact">
+    <div style="font-family: 'Unbounded', cursive;" class="flex justify-center">
+      <h1 class="wow animate__animated animate__fadeInDown text-3xl lg:text-4xl font-semibold max-lg:mt-10 mt-24 dark:text-white">Contact Me</h1>
+    </div>
+    <div class="outercon mt-12 pb-10">
+    <div class="containercontact dark:bg-beige-2">
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt wow animate__animated animate__fadeInUp"></i>
+            <div class="topic dark:text-beige-text">Address</div>
+            <div class="text-one">Ranchi, Jharkhand, India - 835215</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt wow animate__animated animate__fadeInUp"></i>
+            <div class="topic dark:text-beige-text">Phone</div>
+            <div class="text-one">+91 98930 35461</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope wow animate__animated animate__fadeInUp"></i>
+            <div class="topic dark:text-beige-text">Email</div>
+            <div class="text-one">lalitmangal19@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="wow animate__animated animate__fadeInUp topic-text mb-5">Send a message</div>
+        <form id = "contactme">
+          <div class="input-box">
+            <input type="text" name = "name" class="dark:text-beige-text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <input type="email" name = "email" class="dark:text-beige-text" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box message-box">
+            <textarea name = "message" class="dark:text-beige-text" placeholder="Enter your message" required></textarea>
+          </div>
+          <div class="button wow animate__animated animate__fadeInUp">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 dark:bg-royal-blue">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+        <div class="mt-2 lg:mt-0 lg:order-1">
+          <p style="font-family: 'Unbounded', cursive;" class="text-xl lg:text-2xl font-semibold text-center lg:text-left text-gray-400 dark:text-tan max-lg:mb-7">Socials</p>
+        </div>
+        <div class="flex justify-center lg:order-2">
+          <a href="https://github.com/shinigami1908" class="mx-4"><img src="Assets/images/social_images/github.svg" alt="Github" class="h-12 hover:origin-center hover:-rotate-12 hover:scale-110 transition duration-200" id = "gitsocial"></a>
+          <a href="https://www.linkedin.com/in/lalit-mangal/" class="mx-4"><img src="Assets/images/social_images/linkedin.svg" alt="Linkedin" class="h-11 hover:origin-center hover:rotate-12 hover:scale-110 transition duration-200" id = "in"></a>
+          <a href="mailto:lalitmangal19@gmail.com" class="mx-4"><img src="Assets/images/social_images/mail.svg" alt="Mail" class="h-11 hover:origin-center hover:-rotate-12 hover:scale-110 transition duration-200" id = "mail"></a>
+          <a href="https://www.instagram.com/lalitmangal19/" class="mx-4"><img src="Assets/images/social_images/instagram.svg" alt="Instagram" class="h-11 hover:origin-center hover:rotate-12 hover:scale-110 transition duration-200" id = "ig"></a>
+          <a href="https://discord.com/users/769521843853066252" class="mx-4"><img src="Assets/images/social_images/discord.svg" alt="Discord" class="h-11 hover:origin-center hover:-rotate-12 hover:scale-110 transition duration-200" id = "dc"></a>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-700 dark:border-tan">
+      <p class="text-center text-gray-200 dark:text-tan-1">Designed & Created by Lalit Mangal ©</p>
+    </div>
+  </footer>
+  </body>
+
+  <!-- Script import -->
+
+    <script src="Assets/js/app.js"></script>
+    <script src="Assets/js/wow.js"></script>
+    <script>new WOW().init();</script>
+</html>
