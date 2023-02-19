@@ -437,7 +437,7 @@ let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
       if (event.keyCode === konamiCode[index]) {
         index++;
         if (index === konamiCode.length) {
-          window.open("https://youtu.be/xvFZjo5PgG0", "_blank");
+          window.open("https://youtu.be/xMHJGd3wwZk", "_blank");
         }
       } else {
         index = 0;
