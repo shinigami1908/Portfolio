@@ -27,12 +27,13 @@ Portfolio website made by Lalit Mangal.
 - Completely responsive website for all types of display devices.
 - Has a light mode and dark mode that uses local storage.
 - Uses API to fetch data from CodeForces, CodeChef, Hackerrank and a library to fetch GitHub contribution graph
-- Has multiple hidden easter eggs. To see all click here.
+- Has multiple hidden easter eggs.
 - Uses vector image to make the site load faster.
 - Has all types of animations like block animations, loop animations and hover animations.
 - A contact us form made using EmailJS is implemented that auto sends the form info to my email.
 - .me domain purchased for 1 year from namecheap.
 ```
+To see complete list of all easter eggs, <a href=https://github.com/shinigami1908/Portfolio/blob/master/Assets/eastereggs.txt>click here</a>.
 
 <h2>Preview :</h2>
 <img width="960" alt="image" src="https://user-images.githubusercontent.com/78521741/223700054-b56a3920-4835-43b8-a0a7-09a51417c179.png">
