@@ -5,4 +5,6 @@
 
 3. Press F12 or go to console log you will find a poem about ahem-ahem, well you can find that out yourself.
 
-4. Hover over the profile images of all 4 platforms
+4. Hover over the profile images of all 4 platforms and you will meet cursor L again.
+
+5. Enter the Konami code (Up, Up, Down, Down, Left, Right, Left, Right, B, A) to see the magic.
