@@ -1,0 +1,8 @@
+1. Try finding the image used on home screen in both light and dark modes. You can't !!
+    Both are created using DALL-E
+
+2. Hover on my image in About Me section. Anime fans know, it is L from light note.
+
+3. Press F12 or go to console log you will find a poem about ahem-ahem, well you can find that out yourself.
+
+4. Hover over the profile images of all 4 platforms

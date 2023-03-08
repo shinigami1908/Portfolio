@@ -26,6 +26,7 @@ Portfolio website made by Lalit Mangal.
 ```
 - Completely responsive website for all types of display devices.
 - Has a light mode and dark mode that uses local storage.
+- Uses API to fetch data from CodeForces, CodeChef, Hackerrank and a library to fetch GitHub contribution graph
 - Has multiple hidden easter eggs. To see all click here.
 - Uses vector image to make the site load faster.
 - Has all types of animations like block animations, loop animations and hover animations.
