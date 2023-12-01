@@ -42,4 +42,4 @@ To see complete list of all easter eggs, <a href=https://github.com/shinigami190
 <img width="154" alt="image" src="https://user-images.githubusercontent.com/78521741/223700558-f39d601c-5d19-4f8a-bd2e-9e312dcc6519.png">
 
 <h2>📜 License :</h2>
-[MIT](https://opensource.org/licenses/MIT) Copyright (c) 2023 Lalit Mangal
+<a href ="https://opensource.org/licenses/MIT">MIT</a> Copyright (c) 2023 Lalit Mangal
