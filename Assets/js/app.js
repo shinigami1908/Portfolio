@@ -389,10 +389,13 @@ const response3 = await fetch(url3, {
   const data3 = await response3.json();
   document.getElementById("skillshr").innerHTML =   `<h3 class = "font-bold mb-2 dark:text-beige-text dark:font-extrabold">Verified Skills : </h3><ul>`;
   for(var i = 0; i < data3.data.length; i++){
-    if(data3.data[i].attributes.certificate.level)
+    if(data3.data[i].attributes.status == "test_passed")
+    {
+      if(data3.data[i].attributes.certificate.level)
       document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label} (${data3.data[i].attributes.certificate.level})</li></ul>`;
     else
     document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label}</li></ul>`;
+    }
   }
   document.getElementById("skillshr").innerHTML += `</ul>`;
 }
