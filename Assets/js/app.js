@@ -392,9 +392,9 @@ const response3 = await fetch(url3, {
     if(data3.data[i].attributes.status == "test_passed")
     {
       if(data3.data[i].attributes.certificate.level)
-      document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label} (${data3.data[i].attributes.certificate.level})</li></ul>`;
-    else
-    document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label}</li></ul>`;
+        document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label} (${data3.data[i].attributes.certificate.level})</li></ul>`;
+      else
+        document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label}</li></ul>`;
     }
   }
   document.getElementById("skillshr").innerHTML += `</ul>`;
