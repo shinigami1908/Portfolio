@@ -249,6 +249,7 @@ let ratings = 1670;
 async function getUserDatacc(id, apiKey){
 await fetch(`https://corsproxy.io/?https://clist.by/api/v2/account/${id}/`, {
 	"headers": {
+    'Origin': '*',
 		"Authorization": `ApiKey ${apiKey}`
 	}
 })
