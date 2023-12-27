@@ -246,16 +246,15 @@ let apiKey = "shinigami19:9f85c406587c4ce7c3d9562c95695bd610f91920";
 const usercc = "shinigami19";
 let ratings = 1670;
 
-async function getUserDatacc(usercc, apiKey){
-await fetch(`https://corsproxy.io/?https://codechef-api.vercel.app/${usercc}`, {
+async function getUserDatacc(id, apiKey){
+await fetch(`https://corsproxy.io/?https://clist.by/api/v2/account/${id}/`, {
 	"headers": {
-    Origin: "*",
-		// "Authorization": `ApiKey ${apiKey}`
+		"Authorization": `ApiKey ${apiKey}`
 	}
 })
 	.then(response => response.json())
 	.then(data => {
-    ratings = data.currentRating;
+    ratings = data.rating;
   });
   
   document.getElementById("namecc").innerHTML = "Lalit Mangal";
