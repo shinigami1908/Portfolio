@@ -229,177 +229,177 @@ async function getUserData(handle) {
 
 getUserData('shinigami19');
 
-// API for codechef
+// // API for codechef
 
-let rankMapcc = new Map([
-  [0, "#666666"],
-  [1400, "#1e7d22"],
-  [1600, "#3366cc"],
-  [1800, "#684273"],
-  [2000, "#ffbf00"],
-  [2200, "#ff7f00"],
-  [2500, "#d0011b"],
-]);
+// let rankMapcc = new Map([
+//   [0, "#666666"],
+//   [1400, "#1e7d22"],
+//   [1600, "#3366cc"],
+//   [1800, "#684273"],
+//   [2000, "#ffbf00"],
+//   [2200, "#ff7f00"],
+//   [2500, "#d0011b"],
+// ]);
 
-let id = 2638223;
-let apiKey = "shinigami19:9f85c406587c4ce7c3d9562c95695bd610f91920";
-const usercc = "shinigami19";
-let ratings = 1670;
+// let id = 2638223;
+// let apiKey = "shinigami19:9f85c406587c4ce7c3d9562c95695bd610f91920";
+// const usercc = "shinigami19";
+// let ratings = 1670;
 
-async function getUserDatacc(id, apiKey){
-await fetch(`https://corsproxy.io/?https://clist.by/api/v2/account/${id}/`, {
-	"headers": {
-		"Authorization": `ApiKey ${apiKey}`
-	}
-})
-	.then(response => response.json())
-	.then(data => {
-    ratings = data.rating;
-  });
+// async function getUserDatacc(id, apiKey){
+// await fetch(`https://corsproxy.io/?https://clist.by/api/v2/account/${id}/`, {
+// 	"headers": {
+// 		"Authorization": `ApiKey ${apiKey}`
+// 	}
+// })
+// 	.then(response => response.json())
+// 	.then(data => {
+//     ratings = data.rating;
+//   });
   
-  document.getElementById("namecc").innerHTML = "Lalit Mangal";
-  document.getElementById("usernamecc").innerHTML = usercc;
-  document.getElementById("linkcc").href = "https://www.codechef.com/users/" + usercc;
-  document.getElementById("profileimagecc").innerHTML = `<img src="https://cdn.codechef.com/sites/default/files/uploads/pictures/283e8e67c8295485abe2d338eaaff8fe.png" alt="Profile Photo Codechef" class="object-cover h-60 aspect-square rounded-full">`;
-  document.getElementById("occucc").innerHTML = "Student";
-  document.getElementById("countrycc").innerHTML = "India";
-  document.getElementById("collegecc").innerHTML = "Birla Institute of Technology Mesra Ranchi, Jharkhand, India";
-  document.getElementById("ratingcc").innerHTML = ratings;
+//   document.getElementById("namecc").innerHTML = "Lalit Mangal";
+//   document.getElementById("usernamecc").innerHTML = usercc;
+//   document.getElementById("linkcc").href = "https://www.codechef.com/users/" + usercc;
+//   document.getElementById("profileimagecc").innerHTML = `<img src="https://cdn.codechef.com/sites/default/files/uploads/pictures/283e8e67c8295485abe2d338eaaff8fe.png" alt="Profile Photo Codechef" class="object-cover h-60 aspect-square rounded-full">`;
+//   document.getElementById("occucc").innerHTML = "Student";
+//   document.getElementById("countrycc").innerHTML = "India";
+//   document.getElementById("collegecc").innerHTML = "Birla Institute of Technology Mesra Ranchi, Jharkhand, India";
+//   document.getElementById("ratingcc").innerHTML = ratings;
 
-  if (ratings < 1400) {
-    document.getElementById("starscc").innerHTML = "1★";
-    document.getElementById("starscc").style.backgroundColor = rankMapcc.get(0);
-    document.getElementById("ratingstarsn").innerHTML = `<span id = "ratingstarsnsp">★</span>`;
-    document.getElementById("ratingstarsnsp").style.backgroundColor = rankMapcc.get(0);
+//   if (ratings < 1400) {
+//     document.getElementById("starscc").innerHTML = "1★";
+//     document.getElementById("starscc").style.backgroundColor = rankMapcc.get(0);
+//     document.getElementById("ratingstarsn").innerHTML = `<span id = "ratingstarsnsp">★</span>`;
+//     document.getElementById("ratingstarsnsp").style.backgroundColor = rankMapcc.get(0);
 
-  }
-  else if (ratings < 1600) {
-    document.getElementById("starscc").innerHTML = "2★";
-    document.getElementById("starscc").style.backgroundColor = rankMapcc.get(1400);
-    for (let i = 0; i < 2; i++) {
-      document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
-    }
-    var elements = document.querySelectorAll("#ratingstarsnsp");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].style.backgroundColor = rankMapcc.get(1400);
-    }
-  }
-  else if (ratings < 1800) {
-    document.getElementById("starscc").innerHTML = "3★";
-    document.getElementById("starscc").style.backgroundColor = rankMapcc.get(1600);
-    for (let i = 0; i < 3; i++) {
-      document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
-    }
-    var elements = document.querySelectorAll("#ratingstarsnsp");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].style.backgroundColor = rankMapcc.get(1600);
-    }
-  }
-  else if (ratings < 2000) {
-    document.getElementById("starscc").innerHTML = "4★";
-    document.getElementById("starscc").style.backgroundColor = rankMapcc.get(1800);
-    for (let i = 0; i < 4; i++) {
-      document.getElementById("ratingstarsnsp").style.backgroundColor = rankMapcc.get(1800);
-    }
-    var elements = document.querySelectorAll("#ratingstarsnsp");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].style.backgroundColor = rankMapcc.get(1800);
-    }
-  }
-  else if (ratings < 2200) {
-    document.getElementById("starscc").innerHTML = "5★";
-    document.getElementById("starscc").style.backgroundColor = rankMapcc.get(2000);
-    for (let i = 0; i < 5; i++) {
-      document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
-    }
-    var elements = document.querySelectorAll("#ratingstarsnsp");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].style.backgroundColor = rankMapcc.get(2000);
-    }
-  }
-  else if (ratings < 2500) {
-    document.getElementById("starscc").innerHTML = "6★";
-    document.getElementById("starscc").style.backgroundColor = rankMapcc.get(2200);
-    for (let i = 0; i < 6; i++) {
-      document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
-    }
-    var elements = document.querySelectorAll("#ratingstarsnsp");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].style.backgroundColor = rankMapcc.get(2200);
-    }
-  }
-  else if (ratings >= 2500){
-    document.getElementById("starscc").innerHTML = "7★";
-    document.getElementById("starscc").style.backgroundColor = rankMapcc.get(2500);
-    for (let i = 0; i < 7; i++) {
-      document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
-    }
-    var elements = document.querySelectorAll("#ratingstarsnsp");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].style.backgroundColor = rankMapcc.get(2500);
-    }
-  }
-}
+//   }
+//   else if (ratings < 1600) {
+//     document.getElementById("starscc").innerHTML = "2★";
+//     document.getElementById("starscc").style.backgroundColor = rankMapcc.get(1400);
+//     for (let i = 0; i < 2; i++) {
+//       document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
+//     }
+//     var elements = document.querySelectorAll("#ratingstarsnsp");
+//     for (var i = 0; i < elements.length; i++) {
+//       elements[i].style.backgroundColor = rankMapcc.get(1400);
+//     }
+//   }
+//   else if (ratings < 1800) {
+//     document.getElementById("starscc").innerHTML = "3★";
+//     document.getElementById("starscc").style.backgroundColor = rankMapcc.get(1600);
+//     for (let i = 0; i < 3; i++) {
+//       document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
+//     }
+//     var elements = document.querySelectorAll("#ratingstarsnsp");
+//     for (var i = 0; i < elements.length; i++) {
+//       elements[i].style.backgroundColor = rankMapcc.get(1600);
+//     }
+//   }
+//   else if (ratings < 2000) {
+//     document.getElementById("starscc").innerHTML = "4★";
+//     document.getElementById("starscc").style.backgroundColor = rankMapcc.get(1800);
+//     for (let i = 0; i < 4; i++) {
+//       document.getElementById("ratingstarsnsp").style.backgroundColor = rankMapcc.get(1800);
+//     }
+//     var elements = document.querySelectorAll("#ratingstarsnsp");
+//     for (var i = 0; i < elements.length; i++) {
+//       elements[i].style.backgroundColor = rankMapcc.get(1800);
+//     }
+//   }
+//   else if (ratings < 2200) {
+//     document.getElementById("starscc").innerHTML = "5★";
+//     document.getElementById("starscc").style.backgroundColor = rankMapcc.get(2000);
+//     for (let i = 0; i < 5; i++) {
+//       document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
+//     }
+//     var elements = document.querySelectorAll("#ratingstarsnsp");
+//     for (var i = 0; i < elements.length; i++) {
+//       elements[i].style.backgroundColor = rankMapcc.get(2000);
+//     }
+//   }
+//   else if (ratings < 2500) {
+//     document.getElementById("starscc").innerHTML = "6★";
+//     document.getElementById("starscc").style.backgroundColor = rankMapcc.get(2200);
+//     for (let i = 0; i < 6; i++) {
+//       document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
+//     }
+//     var elements = document.querySelectorAll("#ratingstarsnsp");
+//     for (var i = 0; i < elements.length; i++) {
+//       elements[i].style.backgroundColor = rankMapcc.get(2200);
+//     }
+//   }
+//   else if (ratings >= 2500){
+//     document.getElementById("starscc").innerHTML = "7★";
+//     document.getElementById("starscc").style.backgroundColor = rankMapcc.get(2500);
+//     for (let i = 0; i < 7; i++) {
+//       document.getElementById("ratingstarsn").innerHTML += `<span id = "ratingstarsnsp">★</span>`;
+//     }
+//     var elements = document.querySelectorAll("#ratingstarsnsp");
+//     for (var i = 0; i < elements.length; i++) {
+//       elements[i].style.backgroundColor = rankMapcc.get(2500);
+//     }
+//   }
+// }
 
-getUserDatacc(id, apiKey);
+// getUserDatacc(id, apiKey);
 
-// API for hackerrank
+// // API for hackerrank
 
-const username = "shinigami19";
+// const username = "shinigami19";
 
-async function getUserDatahr(username){
-const url = `https://corsproxy.io/?https://www.hackerrank.com/rest/contests/master/hackers/${username}/profile`;
-const response = await fetch(url, {
-  headers: {
-    Origin: "*",
-    Cookie: `_hrank_session=31d9cd93f9b46392aa602076f614344a2d49f307882d3aadd684ad13474c25165e368e7f5ca11322e12adee461a6c1a6dcfc01899baa935a0d404b9f949ad40d`,
-  },
-  });
-  const data = await response.json();
-  document.getElementById("profileimagehr").innerHTML = `<img src="${data.model.avatar}" alt="Profile Photo Hackerrank" class="object-cover h-60 aspect-square rounded-full">`;
-  document.getElementById("linkhr").href = "https://www.hackerrank.com/" + username;
-  document.getElementById("namehr").innerHTML = data.model.personal_first_name.charAt(0).toUpperCase() + data.model.personal_first_name.slice(1) + " " + data.model.personal_last_name.charAt(0).toUpperCase() + data.model.personal_last_name.slice(1);
-  document.getElementById("usernamehr").innerHTML = "@" + data.model.username;
-  document.getElementById("countryhr").innerHTML = data.model.country;
-  document.getElementById("collegehr").innerHTML = data.model.school;
+// async function getUserDatahr(username){
+// const url = `https://corsproxy.io/?https://www.hackerrank.com/rest/contests/master/hackers/${username}/profile`;
+// const response = await fetch(url, {
+//   headers: {
+//     Origin: "*",
+//     Cookie: `_hrank_session=31d9cd93f9b46392aa602076f614344a2d49f307882d3aadd684ad13474c25165e368e7f5ca11322e12adee461a6c1a6dcfc01899baa935a0d404b9f949ad40d`,
+//   },
+//   });
+//   const data = await response.json();
+//   document.getElementById("profileimagehr").innerHTML = `<img src="${data.model.avatar}" alt="Profile Photo Hackerrank" class="object-cover h-60 aspect-square rounded-full">`;
+//   document.getElementById("linkhr").href = "https://www.hackerrank.com/" + username;
+//   document.getElementById("namehr").innerHTML = data.model.personal_first_name.charAt(0).toUpperCase() + data.model.personal_first_name.slice(1) + " " + data.model.personal_last_name.charAt(0).toUpperCase() + data.model.personal_last_name.slice(1);
+//   document.getElementById("usernamehr").innerHTML = "@" + data.model.username;
+//   document.getElementById("countryhr").innerHTML = data.model.country;
+//   document.getElementById("collegehr").innerHTML = data.model.school;
 
-const url2 = `https://corsproxy.io/?https://www.hackerrank.com/rest/hackers/${username}/badges`;
-const response2 = await fetch(url2, {
-  headers: {
-    Origin: "*",
-    Cookie: `_hrank_session=31d9cd93f9b46392aa602076f614344a2d49f307882d3aadd684ad13474c25165e368e7f5ca11322e12adee461a6c1a6dcfc01899baa935a0d404b9f949ad40d`,
-  },
-  });
-  const data2 = await response2.json();
-  document.getElementById("badgeshr").innerHTML =   `<h3 class = "font-bold mb-2 dark:text-beige-text dark:font-extrabold">Badges : </h3><ul>`;
-  for(var i = 0; i < data2.models.length; i++){
-    if(data2.models[i].stars != 0)
-      document.getElementById("badgeshr").innerHTML += `<li>${data2.models[i].badge_name} - ${data2.models[i].stars} stars</li></ul>`;
-  }
-  document.getElementById("badgeshr").innerHTML += `</ul>`;
+// const url2 = `https://corsproxy.io/?https://www.hackerrank.com/rest/hackers/${username}/badges`;
+// const response2 = await fetch(url2, {
+//   headers: {
+//     Origin: "*",
+//     Cookie: `_hrank_session=31d9cd93f9b46392aa602076f614344a2d49f307882d3aadd684ad13474c25165e368e7f5ca11322e12adee461a6c1a6dcfc01899baa935a0d404b9f949ad40d`,
+//   },
+//   });
+//   const data2 = await response2.json();
+//   document.getElementById("badgeshr").innerHTML =   `<h3 class = "font-bold mb-2 dark:text-beige-text dark:font-extrabold">Badges : </h3><ul>`;
+//   for(var i = 0; i < data2.models.length; i++){
+//     if(data2.models[i].stars != 0)
+//       document.getElementById("badgeshr").innerHTML += `<li>${data2.models[i].badge_name} - ${data2.models[i].stars} stars</li></ul>`;
+//   }
+//   document.getElementById("badgeshr").innerHTML += `</ul>`;
   
 
-const url3 = `https://corsproxy.io/?https://www.hackerrank.com/community/v1/test_results/hacker_certificate?username=${username}`;
-const response3 = await fetch(url3, {
-  headers: {
-    Origin: "*",
-    Cookie: `_hrank_session=31d9cd93f9b46392aa602076f614344a2d49f307882d3aadd684ad13474c25165e368e7f5ca11322e12adee461a6c1a6dcfc01899baa935a0d404b9f949ad40d`,
-  },
-  });
-  const data3 = await response3.json();
-  document.getElementById("skillshr").innerHTML =   `<h3 class = "font-bold mb-2 dark:text-beige-text dark:font-extrabold">Verified Skills : </h3><ul>`;
-  for(var i = 0; i < data3.data.length; i++){
-    if(data3.data[i].attributes.status == "test_passed")
-    {
-      if(data3.data[i].attributes.certificate.level)
-        document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label} (${data3.data[i].attributes.certificate.level})</li></ul>`;
-      else
-        document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label}</li></ul>`;
-    }
-  }
-  document.getElementById("skillshr").innerHTML += `</ul>`;
-}
-getUserDatahr(username);
+// const url3 = `https://corsproxy.io/?https://www.hackerrank.com/community/v1/test_results/hacker_certificate?username=${username}`;
+// const response3 = await fetch(url3, {
+//   headers: {
+//     Origin: "*",
+//     Cookie: `_hrank_session=31d9cd93f9b46392aa602076f614344a2d49f307882d3aadd684ad13474c25165e368e7f5ca11322e12adee461a6c1a6dcfc01899baa935a0d404b9f949ad40d`,
+//   },
+//   });
+//   const data3 = await response3.json();
+//   document.getElementById("skillshr").innerHTML =   `<h3 class = "font-bold mb-2 dark:text-beige-text dark:font-extrabold">Verified Skills : </h3><ul>`;
+//   for(var i = 0; i < data3.data.length; i++){
+//     if(data3.data[i].attributes.status == "test_passed")
+//     {
+//       if(data3.data[i].attributes.certificate.level)
+//         document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label} (${data3.data[i].attributes.certificate.level})</li></ul>`;
+//       else
+//         document.getElementById("skillshr").innerHTML += `<li>${data3.data[i].attributes.certificate.label}</li></ul>`;
+//     }
+//   }
+//   document.getElementById("skillshr").innerHTML += `</ul>`;
+// }
+// getUserDatahr(username);
 
 // API for github
 
@@ -416,16 +416,16 @@ async function getGitHubProfile(username) {
 
 getGitHubProfile("shinigami1908");
 
-GitHubCalendar(".calendar", "shinigami1908", {responsive: true, global_stats: false});
+// GitHubCalendar(".calendar", "shinigami1908", {responsive: true, global_stats: false});
 
-// Reply using emailsjs
+// Reply using emailjs
 
 document.getElementById("contactme").addEventListener("submit", function(event) {
   event.preventDefault();
   emailjs.sendForm("mail_from_portfolio", "mail_from_portfolio_t", '#contactme', "e5ZhmyNqVEEFPqkb3")
   .then(function(response) {
     alert("Email sent successfully!");
-    location.reload();
+    document.getElementById("contactme").reset();
   }, function(error) {
     console.log("Send email failed!\r\n Response:\n " + JSON.stringify(error));
     alert("Send email failed! Please try again later.");
