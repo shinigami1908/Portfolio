@@ -216,7 +216,7 @@
 /* about me image */
 
 #aboutmeimg, .statsimg{
-	cursor: url(https://cur.cursors-4u.net/anime/ani-6/ani549.cur), auto !important;
+	cursor: url(../images/cursor.cur), auto !important;
 }
 
 @media ((min-aspect-ratio: 18/37) and (max-aspect-ratio: 1/1)){
